@@ -17,10 +17,18 @@ def test_calc_log():
     with pytest.raises(ValueError):
         calculate_logarithm(8, 0)
 
+@pytest.mark.parametrize("value, expected", [
+    ('123', '321'),
+    ('iyH', 'Hyi'),
+    ("world", "dlrow"),
+ ])
 
-def test_reverse_string_numbers(numbers):
-    assert reverse_string('123') == numbers
+def test_reverse_string(value, expected):
+    assert reverse_string(value) == expected
 
-
-def test_reverse_string_letter(letter):
-    assert reverse_string('iyH') == letter
+# def test_reverse_string_numbers(numbers):
+#     assert reverse_string('123') == numbers
+#
+#
+# def test_reverse_string_letter(letter):
+#     assert reverse_string('iyH') == letter
