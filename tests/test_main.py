@@ -1,4 +1,4 @@
-from src.main import divide, calculate_logarithm
+from src.main import divide, calculate_logarithm, reverse_string
 import pytest
 
 def test_divide():
@@ -9,7 +9,6 @@ def test_divide():
 
 def test_calc_log():
     assert calculate_logarithm(8, 2) == 3.0
-
     assert calculate_logarithm(8, 4) == 1.5
 
     with pytest.raises(ValueError):
@@ -17,3 +16,11 @@ def test_calc_log():
 
     with pytest.raises(ValueError):
         calculate_logarithm(8, 0)
+
+
+def test_reverse_string_numbers(numbers):
+    assert reverse_string('123') == numbers
+
+
+def test_reverse_string_letter(letter):
+    assert reverse_string('iyH') == letter

@@ -6,4 +6,10 @@ def divide(a, b):
 
 
 def calculate_logarithm(x, base):
-    math.log(x, base)
+    result = math.log(x, base)
+    return result
+
+
+def reverse_string(new_string: str) -> str:
+    """"Реверсируем строку"""
+    return new_string[::-1]
